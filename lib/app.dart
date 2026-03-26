@@ -8,6 +8,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'module_12/navi/page_1.dart';
 import 'module_12/navi/page_2.dart';
 import 'module_12/navi/page_3.dart';
+import 'module_13/class_1.dart';
+import 'module_13/class_2.dart';
 import 'module_9/class_3.dart';
 
 class MyApp extends StatelessWidget {
@@ -34,8 +36,10 @@ class MyApp extends StatelessWidget {
             '/page3':(context) =>  Page3(),
             '/Module12Class2':(context) =>  Module12Class2(),
             '/Module12Class3':(context) =>  Module12Class3(),
+            '/Module13Class1':(context) =>  Module13Class1(),
+            '/Module13Class2':(context) =>  Module13Class2(name: "Karim",)
           },
-          initialRoute: '/Module12Class3',
+          initialRoute: '/Module13Class2',
 
           theme: ThemeData(
               brightness: Brightness.light,
