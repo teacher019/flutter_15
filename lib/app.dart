@@ -10,6 +10,7 @@ import 'module_12/navi/page_2.dart';
 import 'module_12/navi/page_3.dart';
 import 'module_13/class_1.dart';
 import 'module_13/class_2.dart';
+import 'module_13/class_3.dart';
 import 'module_9/class_3.dart';
 
 class MyApp extends StatelessWidget {
@@ -37,9 +38,10 @@ class MyApp extends StatelessWidget {
             '/Module12Class2':(context) =>  Module12Class2(),
             '/Module12Class3':(context) =>  Module12Class3(),
             '/Module13Class1':(context) =>  Module13Class1(),
-            '/Module13Class2':(context) =>  Module13Class2(name: "Karim",)
+            '/Module13Class2':(context) =>  Module13Class2(name: "Karim",),
+            '/BottomNav':(context) =>  BottomNav(),
           },
-          initialRoute: '/Module13Class2',
+          initialRoute: '/BottomNav',
 
           theme: ThemeData(
               brightness: Brightness.light,
