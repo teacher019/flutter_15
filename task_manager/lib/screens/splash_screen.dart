@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:task_manager/screens/login_screen.dart';
 import 'package:task_manager/utils/asset_path.dart';
 import 'package:task_manager/widgets/screen_background.dart';
