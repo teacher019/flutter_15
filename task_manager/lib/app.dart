@@ -15,7 +15,6 @@ class TaskManagerApp extends StatelessWidget {
               )
           ),
 
-
           inputDecorationTheme: InputDecorationTheme(
               filled: true,
               fillColor: Colors.white,

@@ -1,20 +1,18 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:task_manager/screens/forget_password_email_verification.dart';
+import 'package:task_manager/screens/login_screen.dart';
 import 'package:task_manager/screens/sign_up_screen.dart';
 import 'package:task_manager/utils/app_color.dart';
 import 'package:task_manager/widgets/screen_background.dart';
 
-import 'new-task_screen.dart';
-
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 150,),
-            Text('Get Started With',
+            Text('Join With Us',
               style: Theme.of(context).textTheme.titleLarge,
             ),
             SizedBox(height: 25,),
@@ -36,33 +34,45 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(height: 25,),
             TextFormField(
               decoration: InputDecoration(
+                  hintText: 'First Name'
+              ),
+            ),
+            SizedBox(height: 25,),
+            TextFormField(
+              decoration: InputDecoration(
+                  hintText: 'Last Name'
+              ),
+            ),
+            SizedBox(height: 25,),
+            TextFormField(
+              decoration: InputDecoration(
+                  hintText: 'Mobile'
+              ),
+            ),
+            SizedBox(height: 25,),
+            TextFormField(
+              decoration: InputDecoration(
                   hintText: 'Password'
               ),
             ),
 
             SizedBox(height: 25,),
-            FilledButton(onPressed: (){
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>NewTaskScreen()));
-            }, child: Icon(Icons.arrow_circle_right_outlined)),
+            FilledButton(onPressed: (){}, child: Icon(Icons.arrow_circle_right_outlined)),
 
             SizedBox(height: 55,),
             Center(
               child: Column(
                 children: [
-                  TextButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgetPasswordEmailVerification()));
-                  }, child: Text('Forget Password ?',style: TextStyle(color: Colors.grey),)),
-
                   RichText(text: TextSpan(
-                      text: "Don't have an account? ",style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500),
+                      text: "Already have an account? ",style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500),
                       children: [
                         TextSpan(
-                            text: 'Sign up', style: TextStyle(
+                            text: 'Sign In', style: TextStyle(
                             color: AppColor.Pcolor2,
                             fontWeight: FontWeight.w600
                         ),
                             recognizer: TapGestureRecognizer()..onTap = (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
                             }
                         )
                       ]
